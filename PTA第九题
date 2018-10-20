@@ -14,3 +14,6 @@ for i in range(len(l)):
         print(l[0], end='')
     else:
         print(l[len(l)-i-1], end=' ')
+        
+        
+        
