@@ -1,0 +1,28 @@
+优化了PTA第五题
+结果：
+def function(n):
+    if n % 2 == 0:
+        n /= 2
+    else:
+        n = (3 * n + 1) / 2
+    return n
+n = input()
+a = list(map(int, input().split()))
+b = a.copy()
+for i in a:
+    a = i
+    while a > 1:
+        a = function(a)
+        if a in b:
+            b.remove(a)
+b.sort(reverse=True)
+c = str(b)
+c = c.replace(',', '')
+print(c[1:len(c) - 1])
+
+1.将昨天的def自定义函数实现，知道了def函数需要return进行输出
+2.在网上学习了map函数：
+  map()是 Python 内置的高阶函数，它接收一个函数 f 和一个 list，并通过把函数 f 依次作用在 list 的每个元素上，得到一个新的 list 并返回。
+  所以a=list(map(int,input().split))一句是先将输入字符串除去空格，再将其转化成序列后，将字符串转化为整数。
+3.这里b = a.copy()执行的是浅复制，值为本身原件而非副本，当修改b时a也会随之改变
+
