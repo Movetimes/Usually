@@ -25,13 +25,24 @@ for j in range(len(list1)):
         1.使用了continue来解决了当指数为零的情况。取消了def的自定义函数
            continue：结束当前迭代，并跳到下一次迭代开头。与break不同，并不结束循环，而是跳到下一次循环。
         2.注意了list1序列中的字符串和整数
-        3.
         
         
 
 修改后任有两个测试点错误.....再次修改如下：
 
-  
+n=[int(x) for x in input().split()]
+if n[1]==0:
+    print(0,0)
+else:
+    for i in range(len(e) // 2):
+        a = n[2 * i]
+        b = n[2 * i + 1]
+        if i == 0 and b > 0:
+            print(a * b, b - 1, end='')
+        elif b > 0:
+            print(' ' + str(a * b), b - 1, end='')
+    print()
+
         
     
        
